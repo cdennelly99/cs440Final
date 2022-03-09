@@ -43,6 +43,25 @@ void myKeyboard(unsigned char key, int mouseX, int mouseY)
 		pTwoy[1] -= 30;
 	}
 
+	
+}
+
+
+void Display()
+{
+	
+	 
+	glClear(GL_COLOR_BUFFER_BIT);
+
+	glRecti(10, pOney[0], 20, pOney[1]);
+	glRecti(620, pTwoy[0], 630, pTwoy[1]);
+	glRecti(ball[0], ball[1], ball[2], ball[3]);
+
+	glFlush();
+	
+	Sleep(50);
+
+
 	//change ball location
 	if (ballDir == 1) {
 		ball[0] += 10;
@@ -113,34 +132,10 @@ void myKeyboard(unsigned char key, int mouseX, int mouseY)
 		ball[2] = 315;
 		ball[3] = 235;
 	}
-	
 
 
-	glRecti(10, pOney[0], 20, pOney[1]);
-	glRecti(620, pTwoy[0], 630, pTwoy[1]);
+	glutPostRedisplay();
 
-
-	glRecti(ball[0], ball[1], ball[2], ball[3]);
-
-	glFlush();
-}
-
-
-void Display()
-{
-	
-	 
-	glClear(GL_COLOR_BUFFER_BIT);
-
-	glRecti(10, pOney[0], 20, pOney[1]);
-	glRecti(620, pTwoy[0], 630, pTwoy[1]);
-
-	glRecti(ball[0], ball[1], ball[2], ball[3]);
-	
-	glFlush();
-
-	
-	//while (ball[0] > 0 && ball[2] < 640) {
 }
 
 void Init()
