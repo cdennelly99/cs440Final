@@ -1,0 +1,7 @@
+J:\School\Winter Quarter 2021-2022\CS 440 - Computer Graphics\Homework 1\HW1-1\Debug\fig2-10.exe
+J:\School\Winter Quarter 2021-2022\CS 440 - Computer Graphics\Homework 1\HW1-3\Debug\fig2-10.exe
+J:\School\Winter Quarter 2021-2022\CS 440 - Computer Graphics\Homework 1\HW1-4\Debug\fig2-10.exe
+J:\School\Winter Quarter 2021-2022\CS 440 - Computer Graphics\Homework 1\HW1-6\Debug\fig2-10.exe
+J:\School\Winter Quarter 2021-2022\CS 440 - Computer Graphics\Homework 1\HW1-7\Debug\fig2-10.exe
+J:\School\Winter Quarter 2021-2022\CS 440 - Computer Graphics\Homework 1\HW1-8\Debug\fig2-10.exe
+J:\School\Winter Quarter 2021-2022\CS 440 - Computer Graphics\Final Project\Visualization\Paired Coordinates\Debug\fig2-10.exe
