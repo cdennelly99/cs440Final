@@ -3,6 +3,9 @@
 #include <gl/Glu.h>
 /*#include <iostream.h> */
 #include "glut.h"
+// Change Color of the "paddles" -------------------------- []
+// Add scoreboard in top right corner, then exit ---------- []
+//
 
 //Y location for players paddles
 GLint pOney[2] = {190, 290};
@@ -47,16 +50,29 @@ void myKeyboard(unsigned char key, int mouseX, int mouseY)
 }
 
 
+
 void Display()
 {
 	
-	 
 	glClear(GL_COLOR_BUFFER_BIT);
 
 	glRecti(10, pOney[0], 20, pOney[1]);
+	glColor3f(0.0, 0.0, 1.0);
+	glColor3f(0.0, 0.0, 1.0);
+	glColor3f(0.0, 0.0, 1.0);
+	glColor3f(0.0, 0.0, 1.0);
+
 	glRecti(620, pTwoy[0], 630, pTwoy[1]);
+	glColor3f(0.0, 0.0, 0.0);
+
 	glRecti(ball[0], ball[1], ball[2], ball[3]);
 
+	glColor3f(1.0, 0.0, 0.0);
+	glColor3f(1.0, 0.0, 0.0);
+	glColor3f(1.0, 0.0, 0.0);
+	glColor3f(1.0, 0.0, 0.0);
+
+	
 	glFlush();
 	
 	Sleep(50);
@@ -133,19 +149,20 @@ void Display()
 		ball[3] = 235;
 	}
 
-
+	glutStrokeCharacter(GLUT_STROKE_ROMAN, 10);
 	glutPostRedisplay();
 
 }
 
+
 void Init()
 {
 	glClearColor(1.0,1.0,1.0,0.0);
-   glColor3f(0.0f,0.0f,0.0f);
-   glPointSize(4.0);
-   glMatrixMode(GL_PROJECTION);
-   glLoadIdentity();
-   gluOrtho2D(1.0,640.0,0.0,480.0);
+	glColor3f(0.0f,0.0f,0.0f);
+	glPointSize(4.0);
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+	gluOrtho2D(1.0,640.0,0.0,480.0);
 }
 
 void main(int argc, char** argv)
@@ -154,7 +171,7 @@ void main(int argc, char** argv)
 	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
 	glutInitWindowSize(640, 480);
 	glutInitWindowPosition(100, 150);
-	glutCreateWindow("my first attempt");
+	glutCreateWindow("Ball Bounce");
 	glutKeyboardFunc(myKeyboard);
 	glutDisplayFunc(Display);
 	Init();
